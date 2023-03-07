@@ -1,0 +1,44 @@
+<html>
+    <head>
+	<meta charset="utf-8" />
+        <title>Editor.md - A Markdown Editor</title>
+        <link rel="stylesheet" href="./css/editormd.min.css">
+        <script src="./jquery-3.6.3.min.js"></script>
+        <script src="./editormd.min.js"></script>
+        <style type="text/css">
+            .markDownDiv{
+                z-index: 1 !important
+            }
+        </style>
+    </head>
+    <body>
+        <div id="markDownDiv" class="markDownDiv">
+            <textarea name="markDownContent" placeholder="code now" style="display: none"></textarea>
+        </div>
+    <body>
+    <script type="text/javascript">
+    // 初始化编辑器
+    var markDownEditor;
+    $(function() {
+        // 编辑器名称要与页面中应放置的区域id保持一致
+        markDownEditor = editormd("markDownDiv", {
+            // 宽度
+            width: "100%",
+            // 高度
+            height: "100%",
+            // 滚动条纵向滚动,设置为false取消滚动
+            syncScrolling : "single",
+            // lib资源路径
+            path: "./lib/",
+            // 编辑器工具栏区域样式风格
+            theme: "dark",
+            // 编辑器编辑部分样式风格
+            editorTheme: "pastel-on-dark",
+            // 预览区域样式风格
+            previewTheme: "dark",
+            // 开启表情使用
+            emoji: true,
+         });
+     });
+    </script>
+</html>
