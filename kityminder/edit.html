@@ -11,6 +11,13 @@
     <title>百度脑图 - 便捷的思维编辑工具</title>
 
     <script src="kityminder.edit.min.js?_=1416390706100" charset="utf-8"></script>
+    <script type="text/javascript">
+        SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function (toElement) {
+            return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+        };
+
+        fio.user.login = Function.prototype;
+    </script>
     <script src="kityminder.config.js?_=1416390706100" charset="utf-8"></script>
     <script src="lang/zh-cn/zh-cn.js?_=1416390706100" charset="utf-8"></script>
 

@@ -55,6 +55,8 @@
             });
 
             $('p.login a').click(function () {
+                window.location.href = './edit.html';
+                /*
                 var urlparts = window.location.href.split('/');
                 urlparts.pop();
                 urlparts = urlparts.join('/');
@@ -63,6 +65,7 @@
                     remember: 7 * 24 * 60 * 60
                 });
                 loadingAnimate(true);
+                */
             });
 
             function preload(url) {
